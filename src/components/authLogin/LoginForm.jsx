@@ -45,10 +45,7 @@ const LoginForm = () => {
       <button className="text-base leading-5 text-gray-500 underline cursor-pointer">
         Lupa Password
       </button>
-      <p className="text-base leading-5 text-gray-500">
-        Belum Punya Akun?{" "}
-        <button className="underline cursor-pointer">Register Now</button>
-      </p>
+      
     </section>
   );
 };

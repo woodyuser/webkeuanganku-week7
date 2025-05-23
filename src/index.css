@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Apply Poppins font to all elements */
+html, body {
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom styles for the login form */
+.shadow-custom {
+  box-shadow: 0 1px 3px rgba(18, 25, 38, 0.1), 0 1px 2px rgba(18, 25, 38, 0.06);
+}
+
+/* Input focus styles */
+input:focus {
+  outline: none;
+  border-color: #4B5563;
+  box-shadow: 0 0 0 3px rgba(75, 85, 99, 0.2);
+}
+
+/* Button hover effect */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
+
+/* Button active effect */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Smooth transitions */
+input, button {
+  transition: all 0.2s ease;
 }

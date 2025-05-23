@@ -1,7 +1,6 @@
-"use client";
 import React from "react";
 
-const LoginFooter = () => {
+const Footer = () => {
   return (
     <footer className="text-base text-center text-gray-500">
       © 2025 Keuku by Indah. All rights reserved.
@@ -9,4 +8,4 @@ const LoginFooter = () => {
   );
 };
 
-export default LoginFooter;
+export default Footer;
