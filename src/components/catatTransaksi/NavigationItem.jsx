@@ -1,8 +1,9 @@
 "use client";
 import React from 'react';
 import { Sidebar } from './Sidebar';
-import TransactionList from './TransactionList';
+import {TransactionList} from './TransactionList';
 import { Footer } from './Footer';
+
 
 export const InputDesign = () => {
   return (

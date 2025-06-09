@@ -1,12 +1,13 @@
 import React from 'react';
-import Logo from './Logo';
-import NavigationItem from './NavigationItem';
+import  Logo  from './Logo';
+import NavigationItem  from './NavigationItem';
+
 
 export const Sidebar = () => {
   const navigationItems = [
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <path d="M9.5 22V12H15.5V22M3.5 9L12.5 2L21.5 9V20C21.5 20.5304 21.2893 21.0391 20.9142 21.4142C20.5391 21.7893 20.0304 22 19.5 22H5.5C4.96957 22 4.46086 21.7893 4.08579 21.4142C3.71071 21.0391 3.5 20.5304 3.5 20V9Z"
                 stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -15,7 +16,7 @@ export const Sidebar = () => {
     },
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <path d="M9.5 11L12.5 14L22.5 4M21.5 12V19C21.5 19.5304 21.2893 20.0391 20.9142 20.4142C20.5391 20.7893 20.0304 21 19.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V5C3.5 4.46957 3.71071 3.96086 4.08579 3.58579C4.46086 3.21071 4.96957 3 5.5 3H16.5"
                 stroke="#EEF2F6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -25,7 +26,7 @@ export const Sidebar = () => {
     },
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <path d="M18.5 20V10M12.5 20V4M6.5 20V14"
                 stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -34,7 +35,7 @@ export const Sidebar = () => {
     },
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <path d="M4.5 15C4.5 15 5.5 14 8.5 14C11.5 14 13.5 16 16.5 16C19.5 16 20.5 15 20.5 15V3C20.5 3 19.5 4 16.5 4C13.5 4 11.5 2 8.5 2C5.5 2 4.5 3 4.5 3V15ZM4.5 15V22"
                 stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -46,7 +47,7 @@ export const Sidebar = () => {
   const bottomItems = [
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <g clipPath="url(#clip0_1357_853)">
             <path d="M12.5 15C14.1569 15 15.5 13.6569 15.5 12C15.5 10.3431 14.1569 9 12.5 9C10.8431 9 9.5 10.3431 9.5 12C9.5 13.6569 10.8431 15 12.5 15Z"
                   stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -64,7 +65,7 @@ export const Sidebar = () => {
     },
     {
       icon: (
-        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[24px] h-[24px] flex-shrink-0">
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 flex-shrink-0">
           <path d="M9.5 21H5.5C4.96957 21 4.46086 20.7893 4.08579 20.4142C3.71071 20.0391 3.5 19.5304 3.5 19V5C3.5 4.46957 3.71071 3.96086 4.08579 3.58579C4.46086 3.21071 4.96957 3 5.5 3H9.5"
                 stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M16.5 17L21.5 12L16.5 7" stroke="#697586" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -76,8 +77,8 @@ export const Sidebar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 h-screen border border-slate-200 flex-[shrink] w-[342px] max-md:w-[280px] max-sm:w-[60px] bg-white overflow-y-auto">
-      <div className="flex flex-col justify-between items-start py-5 pr-20 pl-16 h-full max-md:px-10 max-md:py-5 max-sm:px-2.5 max-sm:py-5">
+    <nav className="fixed top-0 left-0 h-screen border border-slate-200 w-80 max-md:w-72 max-sm:w-16 bg-white overflow-y-auto">
+      <div className="flex flex-col justify-between items-start py-5 px-16 h-full max-md:px-10 max-sm:px-2">
         <Logo />
         <div className="flex flex-col gap-2.5 items-start w-full">
           {navigationItems.map((item, index) => (
@@ -93,3 +94,8 @@ export const Sidebar = () => {
     </nav>
   );
 };
+
+
+
+
+
