@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Keuku – Keuanganku
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi Web Keuangan sederhana berbasis React.js dan Laravel yang digunakan untuk pencatatan keuangan pribadi, terintegrasi langsung dengan Google Sheets API melalui frontend.
 
-## Available Scripts
+## 📌 Deskripsi
+Keuku dikembangkan sebagai prototipe sistem informasi keuangan untuk membantu pencatatan dan visualisasi data keuangan secara real-time. Aplikasi ini terdiri dari frontend React.js dan backend Laravel, dengan penggunaan Google Sheets API secara langsung di sisi frontend untuk menyimpan data transaksi.
 
-In the project directory, you can run:
+## 🚀 Fitur Utama
+- Autentikasi Pengguna (Login, Register, Lupa Password) menggunakan Laravel Backend
+- Dashboard Keuangan dengan rekap pengeluaran dan pemasukan
+- Statistik Keuangan bulanan (Bar Chart) yang interaktif
+- Pencatatan Transaksi yang disimpan langsung ke Google Sheets via API (tanpa backend)
+- About Page dengan marquee berjalan
+- Custom Background dan Identitas Kartu di Dashboard
+- Rekap data berdasarkan tanggal & filter transaksi
+- Responsive Design menggunakan TailwindCSS
 
-### `npm start`
+## 🛠️ Teknologi yang Digunakan
+- React.js (.jsx)
+- Laravel 10 (Backend)
+- Google Sheets API (langsung di frontend)
+- TailwindCSS
+- React Router DOM
+- MySQL (local database Laravel)
+- Laragon (sebagai local server environment)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ⚙️ Cara Menjalankan (Local)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone Repository
+```
+git clone https://github.com/woodyuser/webkeuanganku-week7.git
+cd webkeuanganku-week7
+```
 
-### `npm test`
+### 2. Jalankan Backend (Laravel)
+```
+cd backend-keuku
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Catatan Backend:
+- Database MySQL dikelola melalui phpMyAdmin: http://localhost/phpmyadmin
+- Database: keuku_db
+- Username: root
+- Password: (kosong jika default Laragon/XAMPP)
+- Backend hanya digunakan untuk autentikasi (Login, Register, Lupa Password)
 
-### `npm run build`
+### 3. Jalankan Frontend (React.js)
+```
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Catatan Frontend:
+- Frontend berjalan di: http://localhost:3000
+- Pastikan file .env frontend sudah berisi:
+  ```bash
+  PUBLIC_BUILDER_KEY=d813235722dd44409885b9825c4ed9eb
+  REACT_APP_API_URL=http://localhost:8000/api
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. Konfigurasi Google Sheets API
+Google Sheets API digunakan langsung di frontend (bukan lewat backend).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Atur di file:
+```bash
+frontend-keuku/src/services/googleSheets.js
+```
+  
+Isi variabel berikut:
+```bash
+const API_KEY = 'API_KEY_KAMU';
+const SPREADSHEET_ID = 'SPREADSHEET_ID_KAMU';
+const SHEET_NAME = 'Sheet1'; // atau sesuaikan dengan nama sheet
+```
 
-### `npm run eject`
+Catatan:
+Google Sheets harus di-share agar dapat diakses API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+API Key diatur via Google Cloud Console.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Contoh .env Backend (Laravel)
+```bash
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:XXXXXXXXXXXXXXXXXXXX
+APP_DEBUG=true
+APP_URL=http://localhost
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=keuku_db
+DB_USERNAME=root
+DB_PASSWORD=
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GOOGLE_REDIRECT_URI=http://localhost:8000/api/google/callback
+GOOGLE_SHEET_ID=your-google-sheet-id
+GOOGLE_SHEET_RANGE=Sheet1!A:F
+GOOGLE_SHEET_HEADER_ROW=1
+```
 
-## Learn More
+## 👨‍💻 Developer
+Indah Ayu Putri Mashita Cahyani
+(Universitas Pembangunan Nasional Veteran Jawa Timur)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Lisensi
+Project ini dibuat sebagai bagian dari program magang mandiri di PT Winnicode Garuda Teknologi.
