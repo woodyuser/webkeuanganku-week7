@@ -107,7 +107,7 @@ GOOGLE_SHEET_HEADER_ROW=1
 ```
 
 ## 🔗 Video Demo 
-[Demo Video di YouTube]([https://youtu.be/link-video-kamu](https://youtu.be/nm1G6c9Aq0k)
+[Demo Video di YouTube](https://youtu.be/nm1G6c9Aq0k)
 
 ## 👨‍💻 Developer
 Indah Ayu Putri Mashita Cahyani
